@@ -6,8 +6,8 @@
 frontend:
     resource: "@FrontendBundle/Controller/"
     type:     annotation
-    prefix:   /shop
+    prefix:   /
 
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+# app:
+#     resource: '@AppBundle/Controller/'
+#     type: annotation
