@@ -28,6 +28,7 @@
 
     <link rel="icon" type="image/x-icon" href="{{ asset('img/logo_sm.jpg') }}" />
     <link rel="stylesheet" href="{{ asset('css/base.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" /> {% block stylesheets %} {% endblock %}
 </head>
 
 <body>
@@ -65,15 +66,12 @@
         <li><a class="waves-effect waves-orange center-text" href="#!">GAFAS GEEK POWER</a></li>
     </ul>
 
-
-    {% block body %}{% endblock %}
-
     <div class="container productos">
-        <div class="row" style="text-align: center; margin: 0;">
+        <div class="row">
             <img src="{{ asset('img/banner.jpg') }}" alt="banner">
         </div>
+        {% block body %}{% endblock %}
     </div>
-
 
     <footer class="page-footer footer">
         <div>

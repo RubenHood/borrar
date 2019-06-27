@@ -54,6 +54,14 @@
     src: url(../fonts/ubuntu.ttf);
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 
 /* logo del navbar */
 
@@ -133,4 +141,9 @@ footer a:hover {
 .productos {
     background-color: white;
     margin-top: 3px;
+}
+
+.productos .row {
+    text-align: center;
+    margin: 0;
 }
