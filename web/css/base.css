@@ -1,0 +1,136 @@
+/* As hex codes */
+
+.color-primary-0 {
+    color: #B6A99B
+}
+
+
+/* Main Primary color */
+
+.color-primary-1 {
+    color: #FFFAF5
+}
+
+.color-primary-2 {
+    color: #DDD3C9
+}
+
+.color-primary-3 {
+    color: #948474
+}
+
+.color-primary-4 {
+    color: #6D5D4D
+}
+
+.color-primary-5 {
+    color: #DB3500
+}
+
+
+/* Secundary Primary color */
+
+.color-primary-6 {
+    color: #FF4F17
+}
+
+.color-primary-7 {
+    color: #FF3D00
+}
+
+.color-primary-8 {
+    color: #B12B00
+}
+
+.color-primary-9 {
+    color: #831F00
+}
+
+
+/* fuentes de la web */
+
+@font-face {
+    font-family: ubuntu;
+    src: url(../fonts/ubuntu.ttf);
+}
+
+
+/* logo del navbar */
+
+.navbar-logo {
+    width: 60px;
+    margin-left: 65px;
+    margin-top: 3px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-logo {
+        width: 50px;
+        margin-top: 3px;
+    }
+}
+
+
+/* navbar */
+
+nav {
+    background-color: #fafafa;
+}
+
+body {
+    background-color: #DDD3C9;
+}
+
+
+/* footer */
+
+.footer {
+    padding: 0;
+    background-image: url(../img/ciudad.png);
+    background-size: contain;
+    background-position-x: center;
+}
+
+.footer>div {
+    background-color: black;
+    opacity: 0.8;
+}
+
+
+/* elementos del menu sidenav */
+
+#slide-out li {
+    font-family: ubuntu;
+}
+
+
+/* alinamiento del texto */
+
+.center-text {
+    text-align: center;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.social-media img {
+    margin-top: 25px;
+    width: 40px;
+}
+
+.social-media img:hover {
+    opacity: 0.5;
+}
+
+footer a:hover {
+    opacity: 0.5;
+}
+
+
+/* div que contiene los productos */
+
+.productos {
+    background-color: white;
+    margin-top: 3px;
+}

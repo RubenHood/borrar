@@ -1,20 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--	Color de la barra principal Chrome para mobil-->
+    <meta name="theme-color" content="#00acc1">
+
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="{{ asset('img/logo.jpg') }}">
+
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#00bcd4">
+    <meta name="msapplication-TileImage" content="{{ asset('img/logo.jpg') }}">
     <title>{% block title %}{% endblock %}</title>
 
     <!-- MATERIALIZECSS Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> {% block stylesheets %}{% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/materialize.css') }}" media="screen,projection" />
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/logo_sm.jpg') }}" />
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}" />
 </head>
 
 <body>
+    <nav>
+        <a href="#!" class="brand-logo"> <img class="navbar-logo" src="{{ asset('img/logo_sm.jpg') }}"></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i
+                class="material-icons color-primary-5">menu</i></a>
+        <ul class="right">
+            <li>
+                <a href="#"><img class="circle" style="width: 20px;" alt="Hazte Premium" src="{{ asset('img/logo_sm.jpg') }}" /></a>
+            </li>
+            <li><a href="#"><i class="material-icons color-primary-5" alt="Hazte Premium">person</i></a></li>
+            <li><a href="#"><i class="material-icons color-primary-5" alt="Hazte Premium">add_shopping_cart</i></a></li>
+        </ul>
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="{{ asset('img/titulo_menu.png') }}">
+                </div>
+                <div style="height: 25px;"></div>
+                <a href="#name"><span class="black-text name right-align">Rubén Vargas</span></a>
+                <a href="#email"><span class="black-text email right-align">rubenconb88@gmail.com</span></a>
+            </div>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="waves-effect waves-orange center-text" href="#!">GAFAS GEEK MAN</a></li>
+        <li><a class="waves-effect waves-orange center-text" href="#!">GAFAS GEEK WOMAN</a></li>
+        <li><a class="waves-effect waves-orange center-text" href="#!">GAFAS GEEK NINJA</a></li>
+        <li><a class="waves-effect waves-orange center-text" href="#!">GAFAS GEEK FROG</a></li>
+        <li><a class="waves-effect waves-orange center-text" href="#!">GAFAS GEEK POWER</a></li>
+    </ul>
+
+
+    {% block body %}{% endblock %}
+
+    <div class="container productos">
+        <div class="row" style="text-align: center; margin: 0;">
+            <img src="{{ asset('img/banner.jpg') }}" alt="banner">
+        </div>
+    </div>
+
+
+    <footer class="page-footer footer">
+        <div>
+            <div class="container">
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col s6 offset6 social-media">
+                        <a class="grey-text text-lighten-3" href="https://www.facebook.com"><img src="{{ asset('img/facebook.png') }}" alt=""></a>
+
+                        <a class="grey-text text-lighten-3" href="https://www.instagram.com"><img src="{{ asset('img/instagram.png') }}" alt=""></a>
+
+                        <a class="grey-text text-lighten-3" href="https://www.twitter.com"><img src="{{ asset('img/twitter.png') }}" alt=""></a>
+
+                        <a class="grey-text text-lighten-3" href="https://www.whatsapp.com/"><img src="{{ asset('img/whatsapp.png') }}" alt=""></a>
+
+                        <a class="grey-text text-lighten-3" href="https://www.linkedin.com"><img src="{{ asset('img/linkedin.png') }}" alt=""></a>
+
+                        <a class="grey-text text-lighten-3" href="https://youtube.com"><img src="{{ asset('img/youtube.png') }}" alt=""></a>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        <h5 class="white-text">INFORMATION</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">ABOUT US</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">CONTACT US</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">DELIVERY INFO</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">PRIVACY POLICY</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">TERMS & CONDITIONS</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">SITE MAP</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">RETURNS</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s3">
+                        <h5 class="white-text">MY ACCOUNT</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#!">MY ACCOUNT</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">WISH LIST</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">ORDER HISTORY</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">BRANDS</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">SPECIALS</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">NEWSLETTER</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#!">SECURE PAYMENT</a></li>
+                        </ul>
+                    </div>
+                    <div class="col s3">
+                        <h5 class="white-text">I WANT...</h5>
+                        <ul>
+                            <li>Escriba aquí lo que nos quiere enviar.
+                            </li>
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="textarea1" class="materialize-textarea" placeholder="I want..." style="color: white"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col s3">
+                        <h5 class="white-text">GET IN TOUCH</h5>
+                        <ul>
+                            <li class="grey-text text-lighten-3"><b>Phone:</b> 666555444</a>
+                            </li>
+                            <li class="grey-text text-lighten-3"><b>Email:</b> rubenconb88@gmail.com </a>
+                            </li>
+                            <li class="grey-text text-lighten-3">Your Company LTD.</a>
+                            </li>
+                            <li class="grey-text text-lighten-3">Street Name, 00000, City Name</a>
+                            </li>
+                            <li class="grey-text text-lighten-3">LOCATION IN GOOGLE MAPS
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    <img class="grey-text text-lighten-4 right" src="{{ asset('img/tarjetas.png') }}" style="height: 40px;" />
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
     <!-- MATERIALIZECSS Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    {% block body %}{% endblock %} {% block javascripts %}{% endblock %}
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.longpress.js') }}"></script>
+    <script src="{{ asset('js/materialize.js') }}"></script>
+    <script src="{{ asset('js/base.js') }}"></script>
+    {% block javascripts %}{% endblock %}
 </body>
 
 </html>
